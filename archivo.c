@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 extern int suma_asm(int a, int b); // Declaración de la función en ensamblador
 extern int mult_vector(int *arr1,int *arr2, int n); //funcion que me ayudara a calcular el producto punto de dos vectores
 extern int comparar_nasm(int x, int y, int z); //funcion que me ayudara a comparar que numero es mayor
-
+extern int bubble_sort(int *arr,int n);
 
 void imprime(int *arr, int n)
 {
@@ -18,8 +20,8 @@ void imprime(int *arr, int n)
 int main()
 {
     int valor;
-    printf("Ingrese una opcion\n1) Suma de dos numeros\n2) Producto punto de dos vectores\n3) Calculo de numero mayor\n");
-    printf("opcion = ");
+    printf("Ingrese una opcion\n1) Suma de dos numeros\n2) Producto punto de dos vectores\n3) Calculo de numero mayor\n4)Funcion Bubblesort\n");
+    printf("\nOpcion elegida == ");
     scanf("%d",&valor);
     
     switch (valor)
@@ -59,8 +61,20 @@ int main()
         printf("El numero mayor es == %d \n",res);
         break;
     case 4:
-        break;
-    default:
+        //esta funcion hara el bubblesort de un arreglo n
+        srand(time(0));
+        int len;
+        printf("\nIngrese el tamaño del arreglo =  ");
+        scanf("%d",&len); 
+        int bubbl[len];
+        for(int i=0;i < len;i++){
+            bubbl[i]=rand()%30;
+        }
+        printf("\nEl arreglo se lleno de forma aleatoria\nTiene los siguentes elementos:\n");
+        imprime(bubbl,len);
+        bubble_sort(bubbl,len);
+        printf("\nEl arreglo ordenado es:\n");
+        imprime(bubbl,len);
         break;
     }
 
