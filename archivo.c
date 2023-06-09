@@ -24,7 +24,7 @@ int main()
 {
     int valor;
     printf("Ingrese una opcion\n1) Suma de dos numeros\n2) Producto punto de dos vectores\n3) Calculo de numero mayor\n4) Funcion Bubblesort\n");
-    printf("5) Serie de Fibonacci\n");
+    printf("5) Serie de Fibonacci\n6) Calculo de Factorial\n");
     printf("\nOpcion elegida == ");
     scanf("%d",&valor);
     
