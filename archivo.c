@@ -96,6 +96,16 @@ int main()
             aux=fibonacci(x,y);
             printf("\nEl resultado es == %d \n",aux);
             break;
+    case 6:
+            break;
+    case 7:
+            break;
+    case 8:
+            break;
+    case 9:
+            break;
+    case 10:
+            break;
     default:
             break;
     }
