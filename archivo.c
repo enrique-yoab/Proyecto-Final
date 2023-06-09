@@ -6,7 +6,7 @@ extern int suma_asm(int a, int b); // Declaración de la función en ensamblador
 extern int mult_vector(int *arr1,int *arr2, int n); //funcion que me ayudara a calcular el producto punto de dos vectores
 extern int comparar_nasm(int x, int y, int z); //funcion que me ayudara a comparar que numero es mayor
 extern int bubble_sort(int *arr,int n);
-extern int fibonacci(int x, int y);
+extern int fibonacci(int x);
 void imprime(int *arr, int n)
 {
     int i;
@@ -89,11 +89,11 @@ int main()
             break;
     case 5:
             //esta funcion hara el factorial de un numero
-            int x,y, aux;
+            int x, aux;
             printf("\nEste programa calcula la serie de fibonacci ");
             printf("\nIngrese el numero fibonacci que desea calcular == ");
             scanf("%d",&x);
-            aux=fibonacci(x,y);
+            aux=fibonacci(x);
             printf("\nEl resultado es == %d \n",aux);
             break;
     case 6:
