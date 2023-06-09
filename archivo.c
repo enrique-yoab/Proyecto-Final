@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+//funciones de ensamblador
 extern int suma_asm(int a, int b); // Declaración de la función en ensamblador
 extern int mult_vector(int *arr1,int *arr2, int n); //funcion que me ayudara a calcular el producto punto de dos vectores
 extern int comparar_nasm(int x, int y, int z); //funcion que me ayudara a comparar que numero es mayor
 extern int bubble_sort(int *arr,int n);
 extern int fibonacci(int x);
+extern int factorial(int x);
+
+
 void imprime(int *arr, int n)
 {
     int i;
@@ -88,7 +91,7 @@ int main()
             free(bubbl);
             break;
     case 5:
-            //esta funcion hara el factorial de un numero
+            //esta funcion hara las serie fibbonaci de un numero
             int x, aux;
             printf("\nEste programa calcula la serie de fibonacci ");
             printf("\nIngrese el numero fibonacci que desea calcular == ");
@@ -97,6 +100,12 @@ int main()
             printf("\nEl resultado es == %d \n",aux);
             break;
     case 6:
+            int F, fac;
+            printf("Esta funcion permite calcular el factorial de un numero\n");
+            printf("Ingrese un numero == ");
+            scanf("%d",&F);
+            fac=factorial(F);
+            printf("\nEl factorial de %d es == %d\n",F,fac);
             break;
     case 7:
             break;
